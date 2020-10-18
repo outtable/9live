@@ -21,9 +21,11 @@ dSYM文件|无|有
 产品文档|有|有
 
 ##部分截图
-![截图1](snapshots/01.png)
-![截图2](snapshots/02.png)
-![截图3](snapshots/03.png)
+![截图1](/snapshots/01.png)
+
+![截图2](/snapshots/02.png)
+
+![截图3](/snapshots/03.png)
 
 ###索要免费体验版授权码
 **759610734@qq.com** 或 **504180030@qq.com**
