@@ -2,10 +2,21 @@
 **本产品是一款可以通过独立的特征库来混淆代码和资源的工具，支持armv7/armv7s/arm64/arm64s，可以实现一套代码多次上架AppStore的目的，可以解决一些老代码改造或者因为某些原因被下架的应用重新上架时引起的4.3问题。提供一套非常简单的流程化管理工具和报表工具来管理多个工程，提供非常完善的调试手段帮助你解决问题，并且可以任意扩展资源脚本，实现更复杂的目的，分为免费版和收费版两种，收费版提供更多功能。**
 
 ## 语言支持
-	C/C++/ObjC
+- C
+- C++
+- ObjC
 
 ## 资源支持
-	png/jpg/jpeg/gif/webp/gif/plist/xcassets/bundle/xib/storyboard
+- png
+- jpg
+- gif
+- webp
+- gif
+- plist
+- xcassets
+- bundle
+- xib
+- storyboard
 
 ## 产品特性
 功能/服务|免费版 | 收费版
