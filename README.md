@@ -38,7 +38,7 @@ AppStore上包支持|无|有
 
 ![截图3](http://m.qpic.cn/psc?/V51E5kN14aJcIX2j9YpC3rIJsV2taSpE/TmEUgtj9EK6.7V8ajmQrEK.0nMj0KErV1hiSMg9uF9fP51hx64jFr4WrNGrfxt3G3et1.B3L3U*.aqPis5oLCVcq0kkD8J9LRVpd7FTmKyo!/b&bo=bwQ4BAAAAAABF2c!&rf=viewer_1)
 
-## 索要免费体验版授权码
+## 索要免费体验版授权码（邮箱没有回复的请加QQ)
 **759610734@qq.com** 或 **504180030@qq.com**
 
 ## 购买/续费商业合作请直接联系
