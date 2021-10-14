@@ -5,6 +5,8 @@
 - C
 - C++
 - ObjC
+- js
+- lua
 
 ## 资源支持
 - png
@@ -17,6 +19,7 @@
 - bundle
 - xib
 - storyboard
+- 任意格式其他资源
 
 ## 产品特性
 功能/服务|免费版 | 收费版
