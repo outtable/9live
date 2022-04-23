@@ -8,18 +8,20 @@
 - js
 - lua
 
-## 资源支持
-- png
-- jpg
-- gif
-- webp
-- gif
-- plist
-- xcassets
-- bundle
-- xib
-- storyboard
-- 任意格式资源文件
+## 资源文件支持
+- .a
+- .framework
+- .png
+- .jpg
+- .gif
+- .webp
+- .gif
+- .plist
+- .xcassets
+- .bundle
+- .xib
+- .storyboard
+- 其他任意格式资源文件
 
 ##支持的 XCode 版本
 - Xcode 10.x
