@@ -5,6 +5,7 @@
 - C
 - C++
 - ObjC
+- Swift
 
 ## 资源文件支持格式
 - .png
@@ -28,6 +29,7 @@
 - Xcode 11.x
 - Xcode 12.x
 - Xcode 13.x
+- Xcode 14.x
 
 ## 产品特性
 功能/服务|免费版 | 收费版
