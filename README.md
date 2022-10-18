@@ -24,7 +24,7 @@
 - .a
 - .framework(Fake Framework)
 
-##支持的 XCode 版本
+## 支持的 XCode 版本
 - Xcode 10.x
 - Xcode 11.x
 - Xcode 12.x
@@ -45,8 +45,7 @@ dSYM文件|无|有
 AppStore上包支持|无|有
 产品文档|有|有
 
-##工具原理
-
+## 工具原理
 ![截图1](http://m.qpic.cn/psc?/V51E5kN14aJcIX2j9YpC3rIJsV2taSpE/bqQfVz5yrrGYSXMvKr.cqVgJ5JP7O9nOl.d7B8cEy*BsRbailLTFUJXV7IM59DUHYPEl*EdlUoHuAd9**G1wLvQTM*EjJ8Du.yX1J8WbBLY!/b&bo=2gZCAwAAAAABB70!&rf=viewer_4)
 
 ## 部分截图
