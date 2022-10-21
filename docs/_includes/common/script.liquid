@@ -1,0 +1,11 @@
+<script>
+    window.ui = {
+        title: "{{ site.title }}",
+        baseurl: "{{ site.baseurl }}",
+        i18n: {
+            search_results: "{{ __.search_results | default: 'Search Results' }}",
+            search_results_found: "{{ __.search_results_found | default: 'Search finished, found # page(s) matching the search query.' }}",
+            search_results_not_found: "{{ __.search_results_not_found | default: 'Your search did not match any documents, please make sure that all characters are spelled correctly!' }}"
+        }
+    };
+</script>

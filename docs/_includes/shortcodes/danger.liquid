@@ -1,0 +1,9 @@
+<div class="toasts danger mb-4">
+    <div class="title px-2 py-1">
+        <i class="fa fa-exclamation-triangle"></i>
+        {{ __.danger | default: "Danger" }}
+    </div>
+    <div class="content px-2 py-3">
+        {{ codes | markdownify | strip_newlines -}}
+    </div>
+</div>

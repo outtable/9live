@@ -1,0 +1,12 @@
+{%- include common/rest/site_pages.liquid -%}
+
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    {%- for page in site_pages -%}
+        <url>
+            <loc>{{ page.url | absolute_url | xml_escape }}</loc>
+            <priority>{{ page.content | size | divided_by: 2048.0 | times: 10 | ceil | divided_by: 10.0 | at_least: 0.1 | at_most: 1.0 }}</priority>
+            <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+        </url>
+    {%- endfor %}
+</urlset>

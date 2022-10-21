@@ -1,0 +1,107 @@
+html[dir="rtl"] {
+  // @primer/css/base/typography-base
+  ul,
+  ol {
+    padding-right: 0;
+  }
+
+  dd {
+    margin-right: 0;
+  }
+
+  // layout
+  .menu-sm {
+    left: unset;
+    right: -$theme-menu-width-sm;
+
+    &.shift {
+      left: unset;
+      right: 0;
+    }
+  }
+  .content-wrap {
+    &.shift {
+      left: unset;
+      right: $theme-menu-width-sm;
+    }
+  }
+
+  @include breakpoint(md) {
+    .menu-md {
+      left: unset;
+      right: 0;
+    }
+
+    .content-wrap {
+      margin-left: unset;
+      margin-right: $theme-menu-width;
+
+      &.shift {
+        left: unset;
+        right: 0;
+      }
+    }
+  }
+
+  // toctree
+  .toctree {
+    .fa {
+      margin-right: unset;
+      margin-left: 2px;
+    }
+    > ul {
+      // the first level links
+      > .toc > a {
+        padding-left: unset;
+        padding-right: $spacer-4 / 2;
+      }
+    }
+  }
+
+  // toc layout
+  .toc {
+    @for $level from 1 through 11 {
+      &.level-#{$level}.current {
+        > a {
+          padding-left: unset;
+          padding-right: $spacer-4 * ($level - 1 + 0.5);
+        }
+
+        .level-#{$level + 1} > a {
+          padding-left: unset;
+          padding-right: $spacer-4 * ($level + 0.5);
+        }
+      }
+    }
+  }
+  // markdown-body
+  .markdown-body {
+    .highlight {
+      direction: ltr;
+    }
+    blockquote {
+      border-left: none;
+      border-right: 0.25em $border-style lighten($gray-300, 5%);
+    }
+
+    ul,
+    ol {
+      padding-left: 0;
+      padding-right: 2em;
+    }
+
+    // improved checkbox
+    .task-list-item-checkbox {
+      margin-right: unset;
+      margin-left: 3px;
+    }
+  }
+
+  // font
+  .#{$fa-css-prefix}-arrow-circle-left:before {
+    content: $fa-var-arrow-circle-right;
+  }
+  .#{$fa-css-prefix}-arrow-circle-right:before {
+    content: $fa-var-arrow-circle-left;
+  }
+}

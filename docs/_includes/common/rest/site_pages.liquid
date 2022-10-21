@@ -1,0 +1,8 @@
+{%- assign site_pages = site.html_pages
+    | sort: "path"
+    | sort: "sort"
+    | where_exp: "item", "item.url != '/404.html'"
+    | where_exp: "item", "item.url != '/search.html'" -%}
+
+{%- assign site_dirs  = site_pages | where_exp: "item", "item.dir == item.url" -%}
+{%- assign site_files = site_pages | where_exp: "item", "item.dir != item.url" -%}

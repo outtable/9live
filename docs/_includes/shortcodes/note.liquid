@@ -1,0 +1,9 @@
+<div class="toasts note mb-4">
+    <div class="title px-2 py-1">
+        <i class="fa fa-info-circle"></i>
+        {{ __.note | default: "Note" }}
+    </div>
+    <div class="content px-2 py-3">
+        {{ codes | markdownify | strip_newlines -}}
+    </div>
+</div>

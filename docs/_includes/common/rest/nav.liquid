@@ -1,0 +1,20 @@
+{%- include common/rest/workdir.liquid workdir=page.dir -%}
+
+{% comment %} prev and next {% endcomment %}
+{%- assign index = 0 -%}
+{%- for item in workdir_files %}
+    {%- if item.url == page.url %}
+        {%- assign index = forloop.index -%}
+    {%- endif %}
+{%- endfor -%}
+
+{%- for item in workdir_files -%}
+    {%- assign index_prev = index | minus: 1 -%}
+    {%- assign index_next = index | plus: 1 -%}
+    {%- if forloop.index == index_prev -%}
+        {%- assign prev = item -%}
+    {%- endif %}
+    {%- if forloop.index == index_next -%}
+        {%- assign next = item -%}
+    {%- endif %}
+{%- endfor -%}

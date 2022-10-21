@@ -1,0 +1,33 @@
+<div class="navigation-top d-flex flex-justify-between">
+    <ul class="breadcrumb" role="navigation" aria-label="breadcrumbs navigation">
+        <li class="breadcrumb-item">
+            <a class="no-underline" href="{{ site.baseurl }}/" title="{{ docs.source.path }}">
+                <i class="fa fa-home"></i>
+            </a>
+        </li>
+        {%- case page.url -%}
+            {%- when "/search.html" -%}
+                <li class="breadcrumb-item" aria-current="page">
+                    {{ __.search | default: "Search" }}
+                </li>
+            {%- when "/404.html" -%}
+                <li class="breadcrumb-item" aria-current="page">
+                    404
+                </li>
+            {%- else -%}
+                {%- assign blocks = page.path | split: "/" -%}
+                {%- for block in blocks -%}
+                    <li class="breadcrumb-item" {% if forloop.last %}aria-current="page"{% endif %}>
+                        {%- if forloop.last -%}
+                            {{ page.name }}
+                        {%- else -%}
+                            <a href="{{ site.baseurl }}/{% for block in blocks limit: forloop.index %}{{ block }}/{% endfor %}">{{ block }}</a>
+                        {%- endif -%}
+                    </li>
+                {%- endfor -%}
+        {%- endcase -%}
+    </ul>
+    <a class="edit" href="{% github_edit_link %}" title="{{ __.edit | default: 'Edit on GitHub'}}" rel="noreferrer" target="_blank">
+        <i class="fa fa-edit"></i>
+    </a>
+</div>

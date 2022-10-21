@@ -1,0 +1,18 @@
+{%- case page.url -%}
+    {%- when "/" -%}
+        {%- assign title = site.title
+            | append: " · "
+            | append: site.description | truncate: 110 -%}
+    {%- when "/search.html" -%}
+        {%- assign title = __.search | default: "Search"
+            | append: " · "
+            | append: site.title | truncate: 110 -%}
+    {%- when "/404.html" -%}
+        {%- assign title = "404"
+            | append: " · "
+            | append: site.title | truncate: 110 -%}
+    {%- else -%}
+        {%- assign title = page.title | default: page.name
+            | append: " · "
+            | append: site.title | truncate: 110 -%}
+{%- endcase -%}

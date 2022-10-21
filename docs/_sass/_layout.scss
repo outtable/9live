@@ -1,0 +1,76 @@
+.menu-sm {
+  position: fixed;
+  bottom: 0;
+  left: -$theme-menu-width-sm;
+  width: $theme-menu-width-sm;
+  max-height: 100%;
+
+  &.shift {
+    left: 0;
+  }
+}
+
+.sidebar-wrap {
+  top: 0;
+
+  @extend .menu-sm;
+
+  .sidebar > :last-child {
+    margin-bottom: 5em;
+  }
+}
+
+.addons-wrap {
+  @extend .menu-sm;
+}
+
+.content-wrap {
+  &.shift {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: $theme-menu-width-sm;
+    min-width: 100%;
+  }
+}
+
+@include breakpoint(md) {
+  .menu-md {
+    left: 0;
+    width: $theme-menu-width;
+  }
+
+  .sidebar-wrap {
+    @extend .menu-md;
+
+    .sidebar {
+      // 20px for scroll
+      width: $theme-menu-width + 20px;
+
+      .header,
+      .toctree {
+        width: $theme-menu-width;
+      }
+    }
+  }
+
+  .addons-wrap {
+    @extend .menu-md;
+  }
+
+  .content-wrap {
+    margin-left: $theme-menu-width;
+
+    &.shift {
+      position: relative;
+      left: 0;
+      min-width: 0;
+    }
+  }
+}
+
+@include breakpoint(xl) {
+  .content-wrap {
+    max-width: $width-xl - $theme-menu-width;
+  }
+}

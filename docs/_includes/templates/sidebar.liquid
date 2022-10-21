@@ -1,0 +1,18 @@
+<div class="sidebar-wrap overflow-hidden">
+    <div class="sidebar height-full overflow-y-scroll overflow-x-hidden">
+        <div class="header d-flex flex-column p-3 text-center">
+            <div class="title pb-1">
+                <a class="h4 no-underline py-1 px-2 rounded-1" href="{{ site.baseurl }}/" title="{{ site.description }}">
+                    <i class="fa fa-home"></i> {{ site.title }}
+                </a>
+            </div>
+            <span class="version">{{ docs.latest_release.name }}</span>
+            <form class="search pt-2" action="{{ site.baseurl }}/search.html" method="get" autocomplete="off">
+                <input class="form-control input-block input-sm" type="text" name="q" placeholder="{{ __.search_docs | default: 'Search docs...' }}">
+            </form>
+        </div>
+        <div class="toctree py-2" data-spy="affix" role="navigation" aria-label="main navigation">
+            {% include templates/toctree.liquid %}
+        </div>
+    </div>
+</div>

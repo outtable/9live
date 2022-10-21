@@ -1,0 +1,28 @@
+.breadcrumb-item {
+  display: inline-block;
+  // stylelint-disable-next-line primer/spacing
+  margin-left: -0.35em;
+  white-space: nowrap;
+  list-style: none;
+
+  &::after {
+    padding-right: $em-spacer-5;
+    padding-left: $em-spacer-5;
+    // stylelint-disable-next-line primer/colors
+    color: $border-gray;
+    content: "/";
+  }
+
+  &:first-child {
+    margin-left: 0;
+  }
+}
+
+.breadcrumb-item-selected,
+.breadcrumb-item[aria-current]:not([aria-current="false"]) {
+  color: $text-gray;
+
+  &::after {
+    content: none;
+  }
+}

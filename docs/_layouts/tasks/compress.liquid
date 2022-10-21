@@ -1,0 +1,21 @@
+---
+layout: tasks/shortcodes
+---
+
+{%- if site.debug.compress == false -%}
+    {{ content }}
+{%- else -%}
+    {%- if content contains "<pre" -%}
+        {%- assign content_blocks = content | split: "<pre" -%}
+        {%- for content_block in content_blocks -%}
+            {%- if content_block contains "</pre>" -%}
+                {%- assign pre_blocks = content_block | split: "</pre>" -%}
+                <pre{{ pre_blocks.first }}</pre> {{ pre_blocks.last | split: " " | join: " " -}}
+            {%- else -%}
+                {{- content_block | split: " " | join: " " -}}
+            {%- endif -%}
+        {%- endfor -%}
+    {%- else -%}
+        {{- content | split: " " | join: " " -}}
+    {%- endif -%}
+{%- endif -%}

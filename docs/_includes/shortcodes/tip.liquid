@@ -1,0 +1,9 @@
+<div class="toasts tip mb-4">
+    <div class="title px-2 py-1">
+        <i class="fa fa-check-circle"></i>
+        {{ __.tip | default: "Tip" }}
+    </div>
+    <div class="content px-2 py-3">
+        {{ codes | markdownify | strip_newlines -}}
+    </div>
+</div>

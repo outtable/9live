@@ -1,0 +1,41 @@
+{%- include common/rest/workdir.liquid %}
+
+{% comment %} display the directory name {% endcomment %}
+{%- assign dir = site_pages | where: "url", workdir | first -%}
+
+{%- if workdir_level == 2 %}
+    {% comment %} display the root sub-directory as "p.caption" {% endcomment %}
+    <a class="caption d-block text-uppercase no-wrap px-2 py-0" href="{{ dir.url | relative_url }}">
+        {{ dir.title | default: dir.url }}
+    </a>
+{%- else %}
+    <a class="d-flex flex-items-baseline" href="{{ dir.url | relative_url }}">
+        {{ dir.title | default: dir.url }}
+    </a>
+{%- endif -%}
+
+<ul>
+    {% comment %} list file {% endcomment %}
+    {%- for item in workdir_files -%}
+        {%- assign level = item.dir | append: "temp" | replace_first: "/", "" | split: "/" | size | minus: 1 -%}
+        {%- capture current -%}
+            {%- if page.url == item.url %}current{% endif -%}
+        {%- endcapture %}
+
+        <li class="toc level-{{ level }} {{ current }}" data-sort="{{ item.sort }}" data-level="{{ level }}">
+            <a class="d-flex flex-items-baseline {{ current }}" href="{{ item.url | relative_url }}">
+                {%- if item.sort -%}
+                    {{ item.sort }}. {{ item.title | default: item.name }}
+                {%- else -%}
+                    {{ item.title | default: item.name }}
+                {%- endif -%}
+            </a>
+        </li>
+    {%- endfor -%}
+
+    {% comment %} list dirs {% endcomment %}
+    {%- for workdir in workdir_dirs -%}
+        {%- assign level = workdir | append: "temp" | replace_first: "/", "" | split: "/" | size | minus: 2 %}
+        <li class="toc level-{{ level }}">{% include templates/_toctree.liquid %}</li>
+    {%- endfor -%}
+</ul>

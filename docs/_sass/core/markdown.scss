@@ -1,0 +1,113 @@
+.markdown-body {
+  .d-lang {
+    position: relative;
+
+    &:after {
+      position: absolute;
+      right: 0px;
+      top: 0px;
+      font-family: $mono-font;
+      font-size: $font-size-small;
+      content: attr(data-lang);
+      padding: 0 5px;
+      color: lighten($text-gray-light, 30%);
+    }
+  }
+
+  // 400
+  font-weight: $font-weight-normal;
+
+  a {
+    color: $theme-link;
+
+    &:hover {
+      color: $theme-link-hover;
+    }
+
+    code,
+    tt {
+      color: $theme-link;
+    }
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  dt {
+    font-family: $head-font;
+  }
+
+  table {
+    // 14px
+    font-size: $body-font-size;
+  }
+
+  // ruby highlight fixed, TODO: line number display
+  figure {
+    margin: 0;
+  }
+
+  .anchor {
+    // overwrite to right
+    float: none;
+    padding-right: 0;
+    margin-left: 3px;
+    // rtl
+    margin-right: 3px;
+  }
+
+  // improved
+  code,
+  tt {
+    font-size: $font-size-small;
+    border: $border;
+    color: $theme-code-inline;
+    background-color: $theme-code-inline-background;
+  }
+
+  pre {
+    > code {
+      color: $theme-code;
+    }
+  }
+
+  .highlight pre,
+  pre {
+    font-size: $font-size-small;
+    border: $border;
+    background-color: $theme-code-background;
+  }
+
+  div.highlighter-rouge {
+    @extend .d-lang;
+  }
+
+  // search
+  .search-results {
+    li {
+      list-style: none;
+    }
+  }
+
+  // improved checkbox
+  .task-list-item-checkbox {
+    margin-right: 3px;
+  }
+
+  // mermaid improved
+  .mermaid-wrap {
+    @extend .d-lang;
+    // mdl
+    @include shadow-2dp();
+
+    // .mermaid:not([data-processed="true"])
+    .mermaid {
+      font-size: $font-size-small;
+      font-family: $mono-font;
+      white-space: pre;
+    }
+  }
+}

@@ -1,0 +1,39 @@
+.addons-wrap {
+  background-color: darken($theme-menu-background, 8%);
+
+  .status {
+    cursor: pointer;
+    background-color: darken($theme-menu-background, 5%);
+
+    .branch {
+      .fa {
+        color: $theme-white;
+      }
+
+      .name {
+        color: $green;
+      }
+    }
+    &:active {
+      background: $theme-menu-active-background;
+    }
+  }
+
+  .addons {
+    color: grey;
+
+    dl {
+      margin: 0;
+    }
+
+    dd {
+      display: inline-block;
+
+      a {
+        display: inline-block;
+        padding: 6px;
+        color: $theme-white;
+      }
+    }
+  }
+}

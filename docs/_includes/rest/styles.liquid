@@ -1,0 +1,5 @@
+<link rel="stylesheet" href="{{ base }}/assets/css/theme{% if site.debug.dist != false %}.min{% endif %}.css">
+
+{%- if extra_scss.size > 0 -%}
+    <style>{{ extra_scss | scssify | strip_newlines }}</style>
+{%- endif -%}

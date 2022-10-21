@@ -1,0 +1,41 @@
+{%- comment %} variables {% endcomment -%}
+{%- assign version = theme_alias | split: "@" | last -%}
+{%- assign docs = site.github -%}
+{%- assign rest = docs.public_repositories | where: "html_url", docs.repository_url | first -%}
+
+{%- assign rest_created_at = rest.created_at | default: site.time -%}
+{%- assign rest_updated_at = rest.updated_at | default: site.time -%}
+
+{%- comment %} defaults {% endcomment -%}
+{%- assign direction = site.direction | default: "auto" -%}
+{%- assign lang = site.lang | default: "en" -%}
+{%- assign author = docs.owner.name | default: docs.owner_name -%}
+
+{%- capture generator -%}
+    {%- if site.remote_theme -%}
+        {{- theme_alias | split: "@" | first -}}
+    {%- else -%}
+        {{- theme_alias | split: "@" | first | split: "/" | last -}}
+    {%- endif -%}
+{%- endcapture -%}
+
+{%- comment %} schema {% endcomment -%}
+{%- assign schema_date = page.date | default: rest_created_at | date_to_xmlschema -%}
+{%- assign schema_modi = site.time | date_to_xmlschema -%}
+{%- assign schema_surl = page.url  | absolute_url | xml_escape -%}
+
+{% comment %} debug {% endcomment %}
+{%- if site.debug -%}
+    {%- assign base = site.baseurl -%}
+{%- else -%}
+    {%- assign base = "https://cdn.jsdelivr.net/gh/" | append: theme_alias -%}
+{%- endif -%}
+
+{% comment %} extra {% endcomment %}
+{%- capture extra_scss -%}
+    {%- include extra/styles.scss -%} {{- site.scss -}}
+{%- endcapture -%}
+
+{%- capture extra_script -%}
+    {%- include extra/script.js -%} {{- site.script -}}
+{%- endcapture -%}

@@ -1,0 +1,12 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5, user-scalable=no">
+<meta name="description" content="{{ description }}">
+<meta name="revised" content="{{ docs.build_revision }}">
+<meta name="author" content="{{ author }}">
+<meta name="generator" content="{{ generator }} v{{ version }}">
+
+{%- for meta in site.meta -%}
+    <meta name="{{ meta.first }}" content="{{ meta.last }}">
+{%- endfor -%}
+
+<meta name="theme-color" content="{{ theme_color }}">

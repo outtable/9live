@@ -1,0 +1,33 @@
+{%- include common/rest/i18n.liquid -%}
+
+{%- assign shortcodes = "mermaid, warning, note, tip, danger" | split: ", " -%}
+
+{%- if site.debug.shortcodes == false -%}
+    {{ content }}
+{%- else -%}
+    {%- if content contains "<pre" -%}
+        {%- assign content_blocks = content | split: "<pre" -%}
+        {%- for content_block in content_blocks -%}
+            {%- if content_block contains "</pre>" -%}
+                {%- assign pre_blocks = content_block | split: "</pre>" -%}
+                {%- if content_block contains '><code class="language-' -%}
+                    {%- comment %} shortcodes: <pre><code class="language-**"> {% endcomment -%}
+                    {%- assign custom = content_block | replace_first: '><code class="language-', "" | replace_first: '">', "<temp/>" | split: "<temp/>" -%}
+                    {%- assign lang   = custom.first -%}
+                    {%- assign codes  = custom.last | split: "</code>" | first -%}
+                    {%- if shortcodes contains lang -%}
+                        {%- include shortcodes/{{ lang }}.liquid -%} {{- pre_blocks.last -}}
+                    {%- else -%}
+                        <pre{{ pre_blocks.first }}</pre> {{ pre_blocks.last }}
+                    {%- endif -%}
+                {%- else -%}
+                    <pre{{ pre_blocks.first }}</pre> {{ pre_blocks.last -}}
+                {%- endif -%}
+            {%- else -%}
+                {{- content_block -}}
+            {%- endif -%}
+        {%- endfor -%}
+    {%- else -%}
+        {{- content -}}
+    {%- endif -%}
+{%- endif -%}

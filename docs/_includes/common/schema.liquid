@@ -1,0 +1,27 @@
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "{{ schema_surl }}"
+        },
+        "headline": "{{ title }}",
+        "image": [{% for image in page.images %}"{{ image }}"{% unless forloop.last %},{% endunless %}{% endfor %}],
+        "author": {
+            "@type": "Person",
+            "name": "{{ author }}"
+        },
+        "datePublished": "{{ schema_date }}",
+        "dateModified": "{{ schema_modi }}",
+        "publisher": {
+            "@type": "{{ docs.owner.type }}",
+            "name": "{{ author }}",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "{{ docs.owner.avatar_url }}"
+            }
+        },
+        "description": "{{ description }}"
+    }
+</script>

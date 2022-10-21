@@ -1,0 +1,34 @@
+// fonts
+$body-font: "Lato", BlinkMacSystemFont, "Segoe UI", Helvetica, sans-serif;
+$head-font: "Roboto-Slab", sans-serif;
+$mono-font: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+
+// theme color
+$theme-blue: #2980b9;
+$theme-red: #e74c3c;
+$theme-green: #1abc9c;
+$theme-orange: #e67e22;
+
+$theme-white: lighten($black, 99%);
+$theme-black: lighten($black, 15%);
+
+// theme link
+$theme-link: $blue;
+$theme-link-hover: lighten($blue, 10%);
+$theme-link-visited: lighten($purple, 10%);
+
+// theme code
+$theme-code: $theme-black;
+$theme-code-background: $bg-gray;
+$theme-code-inline: $theme-red;
+$theme-code-inline-background: darken($theme-white, 2%);
+
+// theme mask
+$theme-mask-white: transparentize($theme-white, 0.9);
+$theme-mask-black: transparentize($theme-black, 0.9);
+
+// theme menu
+$theme-menu-width-sm: 85%;
+$theme-menu-width: 300px;
+$theme-menu-background: darken($theme-black, 10%);
+$theme-menu-active-background: darken($theme-blue, 15%);

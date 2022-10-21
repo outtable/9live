@@ -1,0 +1,7 @@
+<script src="{{ base }}/assets/js/jquery.min.js"></script>
+
+{%- if extra_script.size > 0 -%}
+    <script>{{ extra_script }}</script>
+{%- endif -%}
+
+<script src="{{ base }}/assets/js/theme{% if site.debug.dist != false %}.min{% endif %}.js"></script>

@@ -1,0 +1,100 @@
+.sidebar {
+  color: $theme-white;
+  background: $theme-menu-background;
+
+  a {
+    text-decoration: none;
+  }
+
+  li {
+    list-style: none;
+  }
+  .version {
+    color: rgba(255, 255, 255, 0.3);
+  }
+}
+
+.toctree {
+  a {
+    color: $theme-white;
+    padding: 0.5em;
+  }
+
+  .caption {
+    color: lighten($theme-blue, 15%);
+    font-weight: $font-weight-bold;
+    line-height: 32px;
+  }
+
+  .fa {
+    margin-right: 2px;
+  }
+
+  > ul {
+    // the first level links
+    > .toc > a {
+      padding-left: $spacer-4 / 2;
+    }
+
+    // the first level links not current
+    > .toc:not(.current) > a {
+      &:hover {
+        background: $theme-mask-white;
+      }
+      &:active {
+        background: $theme-menu-active-background;
+      }
+    }
+
+    .toc.current {
+      // all expanded links
+      a {
+        color: #404040;
+
+        &:hover {
+          background: $theme-mask-white;
+        }
+        &.current {
+          font-weight: bold;
+          background: $theme-white;
+          border-top: 1px solid var(--toc-2);
+          border-bottom: 1px solid var(--toc-2);
+        }
+      }
+      // parent links
+      > a {
+        .fa-plus-square-o {
+          @extend .fa-minus-square-o;
+        }
+      }
+    }
+    // fixed level-1's hover mask
+    > .toc.current {
+      background: var(--toc-1);
+    }
+  }
+}
+
+// toc layout
+.toc {
+  > ul {
+    @extend .d-none;
+  }
+  @for $level from 1 through 11 {
+    &.level-#{$level}.current {
+      > a {
+        padding-left: $spacer-4 * ($level - 1 + 0.5);
+        background: var(--toc-#{$level});
+      }
+
+      > ul {
+        @extend .d-block;
+        background: var(--toc-#{$level + 1});
+      }
+
+      .level-#{$level + 1} > a {
+        padding-left: $spacer-4 * ($level + 0.5);
+      }
+    }
+  }
+}
