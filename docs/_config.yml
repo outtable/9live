@@ -15,6 +15,7 @@ plugins:
   - jemoji
   - jekyll-avatar
   - jekyll-mentions
+  - jekyll-seo-tag
 
 exclude:
   - Makefile

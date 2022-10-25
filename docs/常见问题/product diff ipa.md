@@ -5,14 +5,10 @@ sort: 1
 # 如何提供对比ipa?
 **当前例子是为了提供演示如何提供对比用的ipa。**
 
-## 要运行本示例的要求
-- 安装了crab-orange.app
-- 马甲包生成结束，准备上线了
-
 ## 一.创建一个对比用的线上版本ipa
 1. 使用xcode打开应用工程，进入工程设置
 
-2. 找到你们主应用的Target，进入Build Settings选项，搜索"DEPLOYMENT_POSTPROCESSING"，改为"YES"，然后搜索 "STRIP_INSTALLED_PRODUCT" 把值改为"NO"，这样生成的包将会保留所有符号信息
+2. 找到你们主应用的Target，进入`Build Settings`选项，搜索`DEPLOYMENT_POSTPROCESSING`，改为`YES`，然后搜索 `STRIP_INSTALLED_PRODUCT` 把值改为`NO`，这样生成的包将会保留所有符号信息
 
 3. 打包应用 ，生成ipa，导出到你的桌面
 
