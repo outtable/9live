@@ -1,100 +1,69 @@
-# test
+# 小蟹iOS混淆器(马甲版)
+**本产品是一款可以通过独立的特征库来混淆代码和资源的工具，通过直接对MachO文件做混淆，也支持对外部SDK文件做混淆，支持armv7/armv7s/arm64/arm64s架构，可以实现一套代码多次上架AppStore的目的，支持cocos2d-x、unity3d、quick-cocos等技术，可以解决一些老代码改造或者因为某些原因被下架的应用重新上架时引起的 AppStore 4.3 问题。提供一套非常简单的流程化管理工具和报表工具来管理多个工程，有非常完善的调试手段帮助你解决使用中的一些问题，可以任意扩展资源脚本，实现更复杂的目的，分为免费版和收费版两种，收费版提供更多功能。**
 
-![CI](https://github.com/rundocs/jekyll-rtd-theme/workflows/CI/badge.svg?branch=develop)
-![jsDelivr](https://data.jsdelivr.com/v1/package/gh/rundocs/jekyll-rtd-theme/badge)
+## 语言支持
+- C
+- C++
+- ObjC
+- Swift
 
-Just another documentation theme compatible with GitHub Pages
+## 资源文件支持格式
+- .png
+- .jpg
+- .gif
+- .webp
+- .gif
+- .plist
+- .xcassets
+- .bundle
+- .xib
+- .storyboard
+- 其他任意格式资源文件
 
-## What it does?
+## 外部SDK文件支持格式
+- .a
+- .framework(Fake Framework)
 
-This theme is inspired by [sphinx-rtd-theme](https://github.com/readthedocs/sphinx_rtd_theme) and refactored with:
+## 支持的 XCode 版本
+- Xcode 10.x
+- Xcode 11.x
+- Xcode 12.x
+- Xcode 13.x
+- Xcode 14.x
 
-- [@primer/css](https://github.com/primer/css)
-- [github-pages](https://github.com/github/pages-gem) ([dependency versions](https://pages.github.com/versions/))
+## 产品特性
 
-## Quick start
+| 功能/服务 | 免费版 | 收费版 |
+|-----|-----|-----|
+| c语言 | 支持 | 支持 |
+| c++语言混淆 | 支持 | 支持 |
+| objc语言混淆 | 支持 | 支持 |
+| swift语言混淆 | 支持 | 支持 |
+| dSYM文件混淆 | 无 | 有 |
+| 编译加速 | 无 |有 |
+| 技术支持 | 无 | 有 |
+| 新手引导 | 有 | 有 |
+| 外部SDK存档混淆 | 有 | 有 |
+| AppStore上包支持 | 无 | 有 |
+| 产品文档 | 有 | 有 |
 
-```yml
-remote_theme: rundocs/jekyll-rtd-theme
-```
+## 工具原理
+![截图1](http://m.qpic.cn/psc?/V51E5kN14aJcIX2j9YpC3rIJsV2taSpE/bqQfVz5yrrGYSXMvKr.cqVgJ5JP7O9nOl.d7B8cEy*BsRbailLTFUJXV7IM59DUHYPEl*EdlUoHuAd9**G1wLvQTM*EjJ8Du.yX1J8WbBLY!/b&bo=2gZCAwAAAAABB70!&rf=viewer_4)
 
-You can [generate](https://github.com/rundocs/starter-slim/generate) with the same files and folders from [rundocs/starter-slim](https://github.com/rundocs/starter-slim/)
+## 部分截图
+![截图1](http://m.qpic.cn/psc?/V51E5kN14aJcIX2j9YpC3rIJsV4ABzsj/TmEUgtj9EK6.7V8ajmQrEJzXeMaxKhzwN.2ZWHZVDndszDz3UHw9bKpjVbI7oY83JFIW2937mBcThVf.FeTDWtErsSGK.WV97XBFBtbBMPg!/b&bo=sAToA7AE6AMDNxI!&rf=viewer_4)
 
-## Usage
+![截图2](http://m.qpic.cn/psc?/V51E5kN14aJcIX2j9YpC3rIJsV4ABzsj/TmEUgtj9EK6.7V8ajmQrEPAiOnnq99FfkYJjx2w54Drwt2ZkPndBswue0kcNs26PeYWRyaI8Po3TlNX5Fmx6wf8CSEVEbr1MOTT9CQT26ZI!/b&bo=eAWwBHgFsAQDNxI!&rf=viewer_4)
 
-Documentation that can guide how to create with Github pages, please refer to [rundocs.io](https://rundocs.io) for details
+![截图3](http://m.qpic.cn/psc?/V51E5kN14aJcIX2j9YpC3rIJsV4ABzsj/TmEUgtj9EK6.7V8ajmQrEE1Yhk.07ZdR8kxCyZ7oBubMK*0IoL*jMeXdOuIZxfTMRfoxSPGiqqy.FQzkMlcxFvHCjaXP*TtlHgvl60Hq9X8!/b&bo=eAWwBHgFsAQDJwI!&rf=viewer_4)
 
-## Features
+![截图4](http://m.qpic.cn/psc?/V51E5kN14aJcIX2j9YpC3rIJsV4ABzsj/TmEUgtj9EK6.7V8ajmQrEJs3BgByz1FT3wBUyZ*MV*V8PrrA5iyHa*vIHHLZwl4OvifD01Gw8OyKWl8W1bViNH1SpSdyYvoVi5jW305BIHU!/b&bo=eAWwBHgFsAQDJwI!&rf=viewer_4)
 
-- Shortcodes (Toasts card, mermaid)
-- Pages Plugins (emoji, gist, avatar, mentions)
-- Auto generate sidebar
-- [Attribute List Definitions](https://kramdown.gettalong.org/syntax.html#attribute-list-definitions) (Primer/css utilities, Font Awesome 4)
-- Service worker (caches)
-- SEO (404, robots.txt, sitemap.xml)
-- Canonical Link (Open Graph, Twitter Card, Schema data)
+![截图5](http://m.qpic.cn/psc?/V51E5kN14aJcIX2j9YpC3rIJsV4ABzsj/TmEUgtj9EK6.7V8ajmQrECvNlTxTVKFC23dM.AFkOC*z9O*D70dluH8Zheryt5DjSPNyj6Yy5mMijXllT8RZG3Y5B4a9nQjB8CtDKKRD*L0!/b&bo=5QSwBIcGQAYDZ9A!&rf=viewer_4)
 
-## Options
 
-| name          | default value        | description       |
-| ------------- | -------------------- | ----------------- |
-| `title`       | repo name            |                   |
-| `description` | repo description     |                   |
-| `url`         | user domain or cname |                   |
-| `baseurl`     | repo name            |                   |
-| `lang`        | `en`                 |                   |
-| `direction`   | `auto`               | `ltr` or `rtl`    |
-| `highlighter` | `rouge`              | Cannot be changed |
+## 索要免费体验版授权码（邮箱没有回复的请加QQ)
+**759610734@qq.com**
 
-```yml
-# folders sort
-readme_index:
-  with_frontmatter: true
-
-meta:
-  key1: value1
-  key2: value2
-  .
-  .
-  .
-
-google:
-  gtag:
-  adsense:
-
-mathjax: # this will prased to json, default: {}
-
-mermaid:
-  custom:     # mermaid link
-  initialize: # this will prased to json, default: {}
-
-scss:   # also _includes/extra/styles.scss
-script: # also _includes/extra/script.js
-
-translate:
-  # shortcodes
-  danger:
-  note:
-  tip:
-  warning:
-  # 404
-  not_found:
-  # copyright
-  revision:
-  # search
-  searching:
-  search:
-  search_docs:
-  search_results:
-  search_results_found: # the "#" in this translate will replaced with results size!
-  search_results_not_found:
-
-plugins:
-  - jemoji
-  - jekyll-avatar
-  - jekyll-mentions
-```
-
-## The license
-
-The theme is available as open source under the terms of the MIT License
+## 购买/续费商业合作请直接联系
+**504180030@qq.com**
