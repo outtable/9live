@@ -63,7 +63,7 @@
 
 <img src="https://outtable.github.io/9live/assets/images/snapshots/snapshot-20.png" width="80%">
 
-## 索要免费体验版授权码（邮箱没有回复的请加QQ)
+## 索要免费体验版授权码（邮箱2天内没有回复的请加QQ)
 **759610734@qq.com**
 
 ## 购买/续费商业合作请直接联系
