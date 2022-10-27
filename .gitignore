@@ -1,3 +1,2 @@
 .DS_Store
-_site/*
-docs/_site/*
+docs/_site
