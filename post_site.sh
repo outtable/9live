@@ -1,3 +1,4 @@
+cp -r Code docs/_site
 cd docs
 sed 's#http://localhost:4000/#https://www.crab-ios-mj.xyz/#g' _site/sitemap.xml > _site/sitemap.tmp.xml
 rm _site/sitemap.xml
