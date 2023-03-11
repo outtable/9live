@@ -58,6 +58,9 @@ sort: 3
 7. 进入“排除对象-语言”选项卡，找到`All Member In ObjC Class/Protocol/Category` 选项，加入 **Model ，排除所有模型对象的内部成员混淆，避免json数据模型解析出错（另外发现里面用了MJExtension，也可以通过设置 `All Member By Call` 分组，来指定当调用了那些方法就把识别出来的类排除掉）
 
 8. 进入【编译设置】选项卡，添加一个`Debug`证书设置，target选择`WNXHuntForCity`，`bundle id`使用您新应用的`bundle id`（注意一定要正确，不然会影响查找本地 mobile provision file文件错误)，`certificate` 选正确的证书，然后点 `mobile provision file` 旁边的搜索按钮，可以从本地识别对应的文件） 
+>
+<img src="https://outtable.github.io/9live/assets/images/snapshots/snapshot-11.png" width="60%">
+
 ```warning
 使用了`Xcode`中的`Automatically manage signing`登陆了账号的记得关闭，不然会引起错误
 ```
@@ -65,6 +68,8 @@ sort: 3
 9. 进入【依赖文件】在`*.xcassets` 分组里面点“+” 把之前建立的 `majia.xcassets` 加入，然后在 `*.plist` 分组里面点 `"+"` 把 `~/Desktop/WNXHuntForCity/info.plist` 加入进来，就会发现应用的icon和相关信息更新了，但是icon没有显示，这是因为这个图片被压缩的原因（依赖文件的作用就是创建差异化的文件资源，假如一个应用有多个马甲，这个依赖文件就是差异化的配置，不同的包用不同的依赖文件）
 
 10. 点击【开始混淆】按钮，会弹出运行设置，默认【调试模式】是打开的
+>
+<img src="https://outtable.github.io/9live/assets/images/snapshots/snapshot-26.png" width="90%">
 
 11. 关闭【校验链接符号】，架构里面，只打开ARM64 就可以了，然后点击【开始混淆】
 

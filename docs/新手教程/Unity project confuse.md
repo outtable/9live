@@ -70,12 +70,16 @@ sort: 5
 <img src="https://outtable.github.io/9live/assets/images/snapshots/snapshot-5.png" width="90%">
 
 3. 配置编译设置，添加一个`Debug`签名，Target选择`Unity-iPhone`（如果下拉列表是空的，先进一下工程，等待工程分析结束，再返回配置界面），bundle id输入您新应用的bundle id
+>
+<img src="https://outtable.github.io/9live/assets/images/snapshots/snapshot-11.png" width="90%">
 
 4. 点击【开始混淆】按钮
+>
+<img src="https://outtable.github.io/9live/assets/images/snapshots/snapshot-26.png" width="90%">
 
 5. 打开 【调试模式”】选项，关闭【检查链接符号】选项，打开【COSDK使用动态库】，关闭【使用标准main流程】，并点击确认，开始执行混淆
 
-6. 等混淆结束后，点击打开工程按钮，准备运行应用，会发现 `Unity-iPhone` 那个下拉框打开后，会多一个target，它的icon上面有一个阻止的标示，选中它，会自动安装应用到手机，就可以开始调试了
+6. 等混淆结束后，点击打开工程按钮，准备运行应用，会发现 `Unity-iPhone` 那个下拉框打开后，会多一个target，它的icon上面有一个阻止的标示，选中它，会自动安装应用到手机，就可以开始调试了(类似下图)
 >
 <img src="https://outtable.github.io/9live/assets/images/snapshots/snapshot-8.png" width="80%">
 

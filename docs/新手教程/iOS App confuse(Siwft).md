@@ -56,11 +56,15 @@ sort: 4
 <img src="https://outtable.github.io/9live/assets/images/snapshots/snapshot-5.png" width="90%">
 
 7. 进入【编译设置】选项卡，添加一个`Debug`证书设置，target选择`SimplePhotoBrowser`，`bundle id`使用您新应用的`bundle id`（注意一定要正确，不然会影响查找本地 `mobile provision file`文件错误)，`certificate `选正确的证书，然后点 mobile provision file 旁边的搜索按钮，可以从本地识别对应的文件） 
+>
+<img src="https://outtable.github.io/9live/assets/images/snapshots/snapshot-11.png" width="90%">
 ```warning
 使用了`Xcode`中的Automatically manage signing的记得关闭，不然会引起混淆出错
 ```
 
 8. 点击【开始混淆】按钮，会弹出运行设置，默认【调试模式】是打开的
+>
+<img src="https://outtable.github.io/9live/assets/images/snapshots/snapshot-26.png" width="90%">
 
 9. 打开【使用标准main流程】，就能省略在`main`函数里面加入`NSCOSDKInit()` 的部分，因为 swift 也找不到`main`函数定义
 

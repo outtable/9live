@@ -58,6 +58,7 @@ sort: 6
 <img src="https://outtable.github.io/9live/assets/images/snapshots/snapshot-5.png" width="90%">
 
 8. 配置【编译设置】，添加一个`Debug`签名，Target选择`cpp-tests-iOS`（如果下拉列表是空的，先进一下工程，等待工程分析结束，再返回配置界面），`bundle id`是您新应用的`bundle id`. 注意：使用了`Xcode`中的自动签名并登陆了账号的记得关闭，必然会出问题
+>
 <img src="https://outtable.github.io/9live/assets/images/snapshots/snapshot-11.png" width="90%">
 
 9. 如果是`cocos-js/cocos-lua/quick-cocos` 开发的游戏项目，请找工程设置的【外部SDK存档-混淆】，如果是 js开发的应用找到请找到 `cocos2d-x`引擎目录下的 `external/spidermonkey/prebuilt/ios/libjs_static.a` 添加进去（这个操作是为了能拦截`libjs_static.a`里面的一些文件读取操作api让混淆资源脚本能正确解码混淆后的js文件)，然后到【资源脚本】里面，添加一个js文件的脚本，这个脚本会对.js文件内容做一次加密。lua开发的应用就需要找到对应的`external/lua/luajit/prebuilt/ios/liblua.a` 或者`external/lua/luajit/prebuilt/ios/libluajit.a`
@@ -67,10 +68,12 @@ sort: 6
 ```
 
 5. 点击【开始混淆】按钮
+>
+<img src="https://outtable.github.io/9live/assets/images/snapshots/snapshot-26.png" width="90%">
 
 6. 打开 【调试模式】 选项，打开【使用标准main流程】，关闭【检查链接符号】选项，并点击确认，开始执行混淆
 
-7. 等混淆结束后，点击打开工程按钮，准备运行应用，会发现 `build all tests iOS` 那个下拉框打开后，会多一个target，它的icon上面有一个阻止的标示，选中它，会制动安装应用到手机，就可以开始调试了
+7. 等混淆结束后，点击打开工程按钮，准备运行应用，会发现 `build all tests iOS` 那个下拉框打开后，会多一个target，它的icon上面有一个阻止的标示，选中它，会制动安装应用到手机，就可以开始调试了(类似下图)
 >
 <img src="https://outtable.github.io/9live/assets/images/snapshots/snapshot-8.png" width="80%">
 
