@@ -23,8 +23,11 @@ sudo spctl --master-disable
 >
 <img src="https://outtable.github.io/9live/assets/images/snapshots/snapshot-13.png" width="60%">
 
-针对M1系列的Mac电脑，会出现brew install ccache 的一些错误，因为暂时不知道怎么判断这个，请自行执行，再点击**环境检查**按钮重新执行就行了，只有看到相关库都完成安装了，就可以了
+针对某些机器上提示`install ccache faild`的问题，请打开终端，执行 `sudo vim /etc/crab.conf` ，然后按需拷贝下面内容，再输入 `:w` 保存
+```
+source ~/.bash_profile#记得检查一下是否存在，不存在就不要加入
+source ~/.zprofile#记得检查一下是否存在，不存在就不要加入
+source ~/.zshrc#记得检查一下是否存在，不存在就不要加入
+```
 
-```
-arch -arm x86_64 brew install ccache
-```
+再点击**环境检查**按钮重新执行就行了，只有看到相关库都完成安装了，就可以了

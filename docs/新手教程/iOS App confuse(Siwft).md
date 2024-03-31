@@ -1,5 +1,5 @@
 ---
-sort: 4
+sort: 6
 ---
 # iOS 应用混淆(Swift)
 **当前例子是为了演示swift语言开发的应用的混淆，其他语言暂不适用。**
@@ -8,7 +8,7 @@ sort: 4
 - 安装了Cocos Pods(你工程用到了才用装)
 - 安装了 homebrew
 - 安装了 Python 3.x 版本
-- 安装了Xcode 11.7 以上
+- 安装了Xcode 14.x 以上
 - MacOS 10.0以上系统
 - 安装了crab-orange.app
 - 已经取得了注册码
@@ -43,11 +43,17 @@ sort: 4
 
 3. 点击【新建项目】按钮，点那个`?`号按钮，创建 `SimplePhotoBrowser.xcworkspace`文件，选对应的注册码，然后选主应用的target是`SimplePhotoBrowser`，点击完成后创建项目成功
 
-4. 点击当前项目的最右边一个按钮，进入`SimplePhotoBrowser` 这个项目，等待完成工程分析
+4. 点击当前项目的最右边一个按钮，进入`SimplePhotoBrowser` 这个项目，等待完成工程分析(项目结构都能在界面中正确显示了）
 >
 <img src="https://outtable.github.io/9live/assets/images/snapshots/snapshot-3.png" width="60%">
 
-5. 退出当前项目，回到工程列表，找到工程设置按钮点进去
+```warning
+1.如果Podfile文件里面包含 :generate_multiple_pod_projects => true 请移除掉，暂时不支持这种工程结构
+
+2.如果你的项目使用了cocospod，请先执行 `pod update` 或者 'pod install` 然后再来做工程分析，并且确保你的工程可以正常编译
+```
+
+5. 退出当前项目，回到工程列表（关闭当前项目就行了），找到工程设置按钮点进去
 >
 <img src="https://outtable.github.io/9live/assets/images/snapshots/snapshot-4.png" width="60%">
 
@@ -58,8 +64,13 @@ sort: 4
 7. 进入【编译设置】选项卡，添加一个`Debug`证书设置，target选择`SimplePhotoBrowser`，`bundle id`使用您新应用的`bundle id`（注意一定要正确，不然会影响查找本地 `mobile provision file`文件错误)，`certificate `选正确的证书，然后点 mobile provision file 旁边的搜索按钮，可以从本地识别对应的文件） 
 >
 <img src="https://outtable.github.io/9live/assets/images/snapshots/snapshot-11.png" width="90%">
+
 ```warning
-使用了`Xcode`中的Automatically manage signing的记得关闭，不然会引起混淆出错
+1.使用了 `Xcode`中 `Signing & Capabilities` 里的`Automatically manage signing` 使用账号自动签名的记得关闭，不然会引起编译错误。
+
+2.使用了 `Xcode`中 `Signing & Capabilities` 里的 `xcode sign in with Apple`，但是你的mobileprofile里面没有打开支持的，在编译阶段会报错，请删除掉。
+
+3.混淆程序执行后，在编译阶段失败后，可以通过打开Xcode工程，查看签名设置，如果发现不对，可以修改混淆程序中的配置，在点击【开始混淆】（切勿直接修改Xcode工程，避免导致需要点击重置按钮重新开始）
 ```
 
 8. 点击【开始混淆】按钮，会弹出运行设置，默认【调试模式】是打开的

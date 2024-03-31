@@ -1,5 +1,5 @@
 ---
-sort: 5
+sort: 7
 ---
 
 # Unity 项目混淆
@@ -72,6 +72,14 @@ sort: 5
 3. 配置编译设置，添加一个`Debug`签名，Target选择`Unity-iPhone`（如果下拉列表是空的，先进一下工程，等待工程分析结束，再返回配置界面），bundle id输入您新应用的bundle id
 >
 <img src="https://outtable.github.io/9live/assets/images/snapshots/snapshot-11.png" width="90%">
+
+```warning
+1.使用了 `Xcode`中 `Signing & Capabilities` 里的`Automatically manage signing` 使用账号自动签名的记得关闭，不然会引起编译错误。
+
+2.使用了 `Xcode`中 `Signing & Capabilities` 里的 `xcode sign in with Apple`，但是你的mobileprofile里面没有打开支持的，在编译阶段会报错，请删除掉。
+
+3.混淆程序执行后，在编译阶段失败后，可以通过打开Xcode工程，查看签名设置，如果发现不对，可以修改混淆程序中的配置，在点击【开始混淆】（切勿直接修改Xcode工程，避免导致需要点击重置按钮重新开始）
+```
 
 4. 点击【开始混淆】按钮
 >
