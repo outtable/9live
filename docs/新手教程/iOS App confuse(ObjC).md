@@ -48,9 +48,7 @@ sort: 5
 <img src="https://outtable.github.io/9live/assets/images/snapshots/snapshot-3.png" width="60%">
 
 ```warning
-1.如果Podfile文件里面包含 :generate_multiple_pod_projects => true 请移除掉，暂时不支持这种结构
-
-2.如果你的项目使用了cocospod，请先执行 `pod update` 或者 `pod install` 然后再来做工程分析，并且确保你的工程可以正常编译
+如果你的项目使用了cocospod，请先执行 `pod update` 或者 `pod install` 然后再来做工程分析，并且确保你的工程可以正常编译
 ```
 
 5. 退出当前项目，回到工程列表（关闭当前项目就行了），找到工程设置按钮 点进去
