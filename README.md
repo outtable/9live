@@ -25,11 +25,7 @@
 - .framework(Fake Framework)
 
 ## 支持的 XCode 版本
-- Xcode 10.x
-- Xcode 11.x
-- Xcode 12.x
-- Xcode 13.x
-- Xcode 14.x
+- Xcode 15.x
 
 ## 产品特性
 
