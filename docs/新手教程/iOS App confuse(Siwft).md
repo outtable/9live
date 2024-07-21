@@ -75,13 +75,13 @@ sort: 6
 >
 <img src="https://outtable.github.io/9live/assets/images/snapshots/snapshot-26.png" width="90%">
 
-9. 打开【使用标准main流程】，就能省略在`main`函数里面加入`NSCOSDKInit()` 的部分，因为 swift 也找不到`main`函数定义
+9. 打开【COSDK自动初始化】，就能省略在`main`函数里面加入`NSCOSDKInit()` 的部分，因为 swift 也找不到`main`函数定义
 
 10. 关闭【校验链接符号】，可以避免出现找不到某些符号的错误提示
 
 11. 打开【swift混编】，避免提示找不到一些swift库
 
-12. 确保关闭 【使用COSDK动态库】，如果你用了`Podfile`，打开了 `use_frameworks!`，就需要对应打开这个
+12. 确保关闭 【COSDK使用动态库】，如果你用了`Podfile`，打开了 `use_frameworks!`，就需要对应打开这个
 
 13. 在架构里面，只打开ARM64 就可以了，然后点击【开始混淆】
 

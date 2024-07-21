@@ -37,26 +37,9 @@ sort: 7
 
 8. 在 `UnityFramework` 的 `Build Phases/Link Binary With Libraries`里面也加入`COSDK.framework`
 
-9. Xcode工程资源里面 找到 `Classes/main.mm`，添加SDK初始化代码
+9. 更改`Unity-iPhone`这个Target的`bundle id`，与您新应用的`bundle id`一致
 
-	```
-	...
-	#include "../UnityFramework/UnityFramework.h"
-	#import <COSDK/COSDK.h> //加入头文件
-	...
-	- (void)runUIApplicationMainWithArgc:(int)argc argv:(char*[])argv
-	{
-	    NSCOSDKInit(); //初始化SDK
-	    self->runCount += 1;
-	    [self frameworkWarmup: argc argv: argv];
-	    UIApplicationMain(argc, argv, nil, [NSString stringWithUTF8String: AppControllerClassName]);
-	}
-	...
-	```
-
-10. 更改`Unity-iPhone`这个Target的`bundle id`，与您新应用的`bundle id`一致
-
-11. 在AppStore上为`UnityFramework`创建一个单独的`bundle id`（这个会单独签名，之后混淆器的编译设置里面需要设置单独的签名设置，需要在一个证书内）
+10. 在AppStore上为`UnityFramework`创建一个单独的`bundle id`（这个会单独签名，之后混淆器的编译设置里面需要设置单独的签名设置，需要在一个证书内）
 
 ## 混淆器配置
 1. 打开`crab-orange.app`
@@ -87,7 +70,9 @@ sort: 7
 
 5. 打开 【调试模式”】选项，关闭【检查链接符号】选项，打开【COSDK使用动态库】，关闭【使用标准main流程】，并点击确认，开始执行混淆
 
-6. 等混淆结束后，点击打开工程按钮，准备运行应用，会发现 `Unity-iPhone` 那个下拉框打开后，会多一个target，它的icon上面有一个阻止的标示，选中它，会自动安装应用到手机，就可以开始调试了(类似下图)
+6. 打开【COSDK使用动态库】开关
+
+7. 等混淆结束后，点击打开工程按钮，准备运行应用，会发现 `Unity-iPhone` 那个下拉框打开后，会多一个target，它的icon上面有一个阻止的标示，选中它，会自动安装应用到手机，就可以开始调试了(类似下图)
 >
 <img src="https://outtable.github.io/9live/assets/images/snapshots/snapshot-8.png" width="80%">
 
