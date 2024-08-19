@@ -16,17 +16,17 @@ sort: 1
 ## 环境检查
 为了保证`crab-orange.app`能正常完成环境检查操作，请检查一下您的环境，确保下面工具已经正常安装
 
-- Xcode13.x 或以上版本
+- Xcode14.x 或以上版本
 - home brew
 - python3
 - pip3
 - cocos pods(非必需）
 
 ## Xcode 安装和配置
-请至少安装Xcode13.x 或以上版本，可以通过AppStore搜索下载
-如果安装了`Xcode`，我们也需要安装`Xcode`命令行工具，可以通过下面命令完成安装
+请至少安装Xcode14.x 或以上版本，可以通过AppStore搜索下载
+如果安装了`Xcode`，我们也需要安装`Xcode`命令行工具，不然不能使用xcodebuild命令行，可以通过下面命令完成安装
 ```
-xcode-select -install
+xcode-select --install
 ```
 安装完成后，执行下面命令，看看有没有输出正确的`xcode`路径
 ```
@@ -39,7 +39,7 @@ xcode-select --switch {Xcode.app路径}
 > Xcode.app路径我本机上是`/Applications/Xcode.app`
 
 ## home brew 安装和配置
-一般MacOS都会内置`brew`命令，除非你删掉了`brew`，如果想要重新安装，可以执行洗面的命令安装
+一般MacOS都会内置`brew`命令，除非你删掉了`brew`，如果想要重新安装，可以执行下面的命令安装
 ```
 /bin/zsh -c "$(curl -fsSL https://gitee.com/cunkai/HomebrewCN/raw/master/Homebrew.sh)"
 ```

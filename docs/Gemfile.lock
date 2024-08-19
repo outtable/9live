@@ -261,6 +261,7 @@ GEM
 
 PLATFORMS
   universal-darwin-21
+  universal-darwin-23
 
 DEPENDENCIES
   github-pages
