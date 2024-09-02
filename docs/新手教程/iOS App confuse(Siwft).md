@@ -24,7 +24,7 @@ sort: 6
 
 2. 在工程目录 `~/Desktop/WNXHuntForCity` 下 建立一个`COSDK`目录，把我们给您的`Products/COSDK.framework`和`Products/**.dat`拖动进去
 
-3. 然后执行终端命令 `cd ~/Desktop/WNXHuntForCity`下，执行  `pod update` (用了cocospods的，请执行一次)
+3. 然后执行终端命令 `cd ~/Desktop/WNXHuntForCity`下，执行  `pod install --no-repo-update` (用了cocospods的，请执行一次)
 
 4. xcode打开 `~/Desktop/WNXHuntForCity.xcworkspace` 文件，把`COSDK`目录加入到工程里面 (实际的COSDK.framework名称跟图片可能不一致)
 >

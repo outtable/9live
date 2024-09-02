@@ -24,7 +24,7 @@ sort: 5
 
 2. 在工程目录 `~/Desktop/WNXHuntForCity` 下 建立一个`COSDK`目录，把我们给您的`Products/COSDK.framework`和`Products/**.dat`拖动进去
 
-3. 然后执行终端命令 `cd ~/Desktop/WNXHuntForCity`下，执行  `pod update` (用了cocospods的，请执行一次)
+3. 然后执行终端命令 `cd ~/Desktop/WNXHuntForCity`下，执行  `pod install --no-repo-update` (用了cocospods的，请执行一次)
 
 4. xcode打开 `~/Desktop/WNXHuntForCity.xcworkspace` 文件，把`COSDK`目录加入到工程里面 (实际的COSDK.framework名称跟图片可能不一致)
 >
@@ -69,7 +69,12 @@ sort: 5
 3.混淆程序执行后，在编译阶段失败后，可以通过打开Xcode工程，查看签名设置，如果发现不对，可以修改混淆程序中的配置，在点击【开始混淆】（切勿直接修改Xcode工程，避免导致需要点击重置按钮重新开始）
 ```
 
-8. 进入【依赖文件】在`*.xcassets` 分组里面点“+” 把之前建立的 `majia.xcassets` 加入，然后在 `*.plist` 分组里面点 `"+"` 把 `~/Desktop/WNXHuntForCity/info.plist` 加入进来，就会发现应用的icon和相关信息更新了，但是icon没有显示，这是因为这个图片被压缩的原因（依赖文件的作用就是创建差异化的文件资源，假如一个应用有多个马甲，这个依赖文件就是差异化的配置，不同的包用不同的依赖文件）
+8. 进入【依赖文件】在`*.xcassets` 分组里面点“+” 把icon所在的xcassets `images.xcassets` 加入，然后在 `*.plist` 分组里面点 `"+"` 把 `~/Desktop/WNXHuntForCity/info.plist` 加入进来，就会发现应用的icon和相关信息更新了（依赖文件的作用就是创建差异化的文件资源，假如一个应用有多个马甲，这个依赖文件就是差异化的配置，不同的包用不同的依赖文件）
+>
+```tip
+这一部分是可选的
+```
+
 
 9. 点击【开始混淆】按钮，会弹出运行设置，默认【调试模式】是打开的
 >
