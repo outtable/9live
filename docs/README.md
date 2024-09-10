@@ -1,5 +1,5 @@
-# 小蟹iOS混淆器
-​		本产品是一款可以通过独立的特征库来混淆代码和资源的工具，通过直接对MachO文件做混淆，也支持对外部SDK文件做混淆，支持armv7/armv7s/arm64/arm64s架构，支持cocos2d-x、unity3d、quick-cocos等技术，可以解决一些老代码改造或者因为某些原因被苹果商店下架的应用重新上架时引起的 AppStore 4.3 问题。提供一套非常简单的流程化管理工具和报表工具来管理多个工程，有非常完善的调试手段帮助你解决使用中的一些问题，可以任意扩展资源脚本，实现更复杂的目的，分为免费版和收费版两种，收费版提供更多功能。
+# 小蟹iOS马甲混淆加固上架工具[查看在线文档](https://outtable.github.io/9live)
+本产品是一款可以通过独立的特征库来混淆代码和资源的工具，历时5年研发，属于第三代产品。支持工程级别重构，并且每个单独的工程最终混淆结果不一致，可以直接修改执行文件和外部SDK文件，支持armv7/armv7s/arm64/arm64s架构，完美支持swiftUI、cocos2d-x、unity3d、quick-cocos等技术，可以解决一些老代码改造或者因为某些原因被苹果商店下架的应用重新上架时引起的 AppStore 4.3、2.3.1 问题，或需要上架多个马甲的需求。提供一套非常简单的流程化管理工具和报表工具来管理多个工程，有非常完善的调试手段帮助你解决使用中的一些问题，提供ipa静态分析工具能大大提升过审比率，并且可以任意扩展资源类型，实现更加全面的混淆效果，保证上传应用的每个字节都被安排的明明白白，让您上传的应用100%过机审，分为免费版和收费版两种，收费版提供更多功能。
 
 下载地址:[点这里转跳GitHub](https://github.com/outtable/9live)
 
@@ -27,11 +27,7 @@
 - .framework(Fake Framework)
 
 ## 支持的 XCode 版本
-- Xcode 10.x
-- Xcode 11.x
-- Xcode 12.x
-- Xcode 13.x
-- Xcode 14.x
+- Xcode 15.x
 
 ## 产品特性
 
@@ -45,6 +41,7 @@
 | 编译加速 | 无 |有 |
 | 技术支持 | 无 | 有 |
 | 新手引导 | 有 | 有 |
+| ipa静态分析工具| 无 | 有 |
 | 外部SDK存档混淆 | 有 | 有 |
 | AppStore上包支持 | 无 | 有 |
 | 产品文档 | 有 | 有 |
@@ -64,7 +61,12 @@
 
 <img src="https://outtable.github.io/9live/assets/images/snapshots/snapshot-20.png" width="80%">
 
-## 索要免费体验版授权码（邮箱2天内没有回复的请加QQ)
+<img src="https://outtable.github.io/9live/assets/images/snapshots/snapshot-31.png" width="80%">
+
+## 如何获取工具？
+请在 **Products** 目录下下载 **beta1.5/crab-orange-1.5.1.dmg**
+
+## 索要免费体验版授权码（邮箱没有回复的请加QQ)
 **759610734@qq.com**
 
 ## 购买/续费商业合作请直接联系
