@@ -79,7 +79,9 @@ sort: 8
 
 6. 打开 【调试模式】 选项，打开【COSDK自动初始化】
 
-7. 修改【COSDK自定义名称】为给你的`Products.zip`里面的那个framework的名字(如果是COSDK，可以不填写)
+7. 修改【COSDK自定义名称】为给你的`Products.zip`里面的那个framework的名字(如果给你的是COSDK.framework，可以不填写)
+>
+<img src="https://outtable.github.io/9live/assets/images/snapshots/snapshot-34.png" width="40%">
 
 8. 等混淆结束后，点击打开工程按钮，准备运行应用，会发现 `build all tests iOS` 那个下拉框打开后，会多一个target，它的icon上面有一个阻止的标示，选中它，会制动安装应用到手机，就可以开始调试了(类似下图)
 >

@@ -75,15 +75,15 @@ sort: 6
 
 9. 打开【COSDK自动初始化】，就能省略在`main`函数里面加入`NSCOSDKInit()` 的部分，因为 swift 也找不到`main`函数定义
 
-10. 修改【COSDK自定义名称】为给你的`Products.zip`里面的那个framework的名字(如果是COSDK，可以不填写)
+10. 修改【COSDK自定义名称】为给你的`Products.zip`里面的那个framework的名字(如果给你的是COSDK.framework，可以不填写)
+>
+<img src="https://outtable.github.io/9live/assets/images/snapshots/snapshot-34.png" width="40%">
 
-11. 打开【swift混编】，避免提示找不到一些swift库
+11. 确保关闭 【COSDK使用动态库】，如果你用了`Podfile`，打开了 `use_frameworks!`，就需要对应打开这个
 
-12. 确保关闭 【COSDK使用动态库】，如果你用了`Podfile`，打开了 `use_frameworks!`，就需要对应打开这个
+12. 在架构里面，只打开ARM64 就可以了，然后点击【开始混淆】
 
-13. 在架构里面，只打开ARM64 就可以了，然后点击【开始混淆】
-
-14. 再次点击【开始混淆】按钮，然后一直等到混淆器提示混淆完成，点击【打开工程】按钮，准备运行应用，会发现 `WNXHuntForCity` 那个下拉框打开后，会多一个target，它的icon上面有一个阻止的标示，选中它，会自动安装应用到手机，就可以开始调试了
+13. 再次点击【开始混淆】按钮，然后一直等到混淆器提示混淆完成，点击【打开工程】按钮，准备运行应用，会发现 `WNXHuntForCity` 那个下拉框打开后，会多一个target，它的icon上面有一个阻止的标示，选中它，会自动安装应用到手机，就可以开始调试了
 >
 <img src="https://outtable.github.io/9live/assets/images/snapshots/snapshot-8.png" width="80%">
 >
