@@ -79,7 +79,7 @@ sort: 6
 >
 <img src="https://outtable.github.io/9live/assets/images/snapshots/snapshot-34.png" width="40%">
 
-11. 确保关闭 【COSDK使用动态库】，如果你用了`Podfile`，打开了 `use_frameworks!`，就需要对应打开这个
+11. 确保开启了 【COSDK使用动态库】，如果你用了`Podfile`，打开了 `use_frameworks!`，就需要对应打开这个
 
 12. 在架构里面，只打开ARM64 就可以了，然后点击【开始混淆】
 

@@ -63,11 +63,11 @@ python3 --version
 ```
 如果没有安装`python3`可以通过下面命令完成安装
 ```
-brew install python@3.8
+brew install python@3.9
 ```
 如果通过`python3`无法直接执行命令，请使用下面命令卸载后再安装一次
 ```
-brew uninstall python
+brew uninstall python3 --ignore-dependencies
 ```
 
 ## pip3 安装和配置
