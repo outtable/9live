@@ -34,3 +34,6 @@ sort: 1
 - swift symbol confuse（Swift符号混淆开启)
 > 如果被识别成一般的swift符号格式，就会被混淆，对Objc Meta Data也有效
 > 
+
+>
+<img src="https://outtable.github.io/9live/assets/images/snapshots/snapshot-36.png" width="60%">

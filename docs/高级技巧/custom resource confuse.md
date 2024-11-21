@@ -11,3 +11,6 @@ sort: 2
 2. 点'+'，创建一个脚本分组，设置一个名字比如说lua
 
 3. 找到对应的lua分组，可以看到后缀设置，一般不需要设置，有个缺省的，假如还有一种我们自定义的lua文件后缀，比如说luao，我们也加进去，用'｜'分隔就行了，不要有空格
+
+>
+<img src="https://outtable.github.io/9live/assets/images/snapshots/snapshot-35.png" width="60%">
