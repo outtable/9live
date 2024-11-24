@@ -23,7 +23,7 @@ sort: 1
 - cocos pods(非必需）
 
 ## Xcode 安装和配置
-请至少安装Xcode14.x 或以上版本，可以通过AppStore搜索下载
+请至少安装 Xcode15.x 或以上版本，可以通过AppStore搜索下载
 如果安装了`Xcode`，我们也需要安装`Xcode`命令行工具，不然不能使用xcodebuild命令行，可以通过下面命令完成安装
 ```
 xcode-select --install
