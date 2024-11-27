@@ -4,7 +4,7 @@ sort: 1
 
 # 应用安装
 
- 请访问 [https://github.com/outtable/9live](https://github.com/outtable/9live) 点击下载 `Products/beta1.0/crab-orange-1.0.dmg`
+ 请访问 [https://github.com/outtable/9live](https://github.com/outtable/9live) 点击下载 `Products/beta1.5/crab-orange-1.5.zip`
 
 > 因为混淆工具app尚未上架AppStore，所以下载后会提示安全问题，请详细阅读当前教程
 

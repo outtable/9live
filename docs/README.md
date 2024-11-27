@@ -64,7 +64,7 @@
 <img src="https://outtable.github.io/9live/assets/images/snapshots/snapshot-31.png" width="80%">
 
 ## 如何获取工具？
-请在 **Products** 目录下下载 **beta1.5/crab-orange-1.5.1.dmg**
+请在 **Products** 目录下下载 **beta1.5/crab-orange-1.5.zip**
 
 ## 索要免费体验版授权码（邮箱没有回复的请加QQ)
 **759610734@qq.com**
