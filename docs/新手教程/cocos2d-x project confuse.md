@@ -35,6 +35,7 @@ sort: 8
  <img src="https://outtable.github.io/confuse-9live/assets/images/snapshots/snapshot-15.png" width="90%">
 
 4. 点击`Xcode`中`cocos2d_tests`这个工程文件 找到 TARGETS 里面的 `cpp-tests IOS`，在`Framework Search Paths`里面添加 `"$(SRCROOT)/../cocos/COSDK"`
+<img src="https://outtable.github.io/confuse-9live/assets/images/snapshots/snapshot-43.png" width="60%">
 
 5. 更改`cocos2d-x`工程中`cpp-tests`这个Target的`bundle id`，与您新应用的`bundle id`一致
 >
@@ -78,6 +79,9 @@ sort: 8
 >
 ```tip
 因为大部分项目都有自己的脚本加密方案在POST_BUILD阶段替换，所以需要修改一下js脚本的混淆操作发生时机，在【资源脚本】/【lua 脚本定义】 里面修改`confuse-script-phase` 为 `copy-resource` 就可以了
+```
+```tip
+如果需要对其他资源做加密混淆，请阅读相关文档 [如何混淆一个自定义格式的资源](https://outtable.github.io/confuse-9live/%E9%AB%98%E7%BA%A7%E6%8A%80%E5%B7%A7/%E8%87%AA%E5%AE%9A%E4%B9%89%E8%B5%84%E6%BA%90%E6%B7%B7%E6%B7%86.html)、[外部SDK混淆](https://outtable.github.io/confuse-9live/%E9%AB%98%E7%BA%A7%E6%8A%80%E5%B7%A7/%E5%A4%96%E9%83%A8SDK%E6%B7%B7%E6%B7%86.html) 两篇文章
 ```
 
 5. 点击【开始混淆】按钮
