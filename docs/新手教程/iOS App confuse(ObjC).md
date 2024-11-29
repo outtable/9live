@@ -67,6 +67,7 @@ sort: 5
 1.使用了 `Xcode`中 `Signing & Capabilities` 里的`Automatically manage signing` 使用账号自动签名的记得关闭，不然会引起编译错误。
 2.使用了 `Xcode`中 `Signing & Capabilities` 里的 `xcode sign in with Apple`，但是你的mobileprofile里面没有打开支持的，在编译阶段会报错，请删除掉。
 3.混淆程序执行后，在编译阶段失败后，可以通过打开Xcode工程，查看签名设置，如果发现不对，可以修改混淆程序中的配置，在点击【开始混淆】（切勿直接修改Xcode工程，避免导致需要点击重置按钮重新开始）
+4.确保证书只有一个，有些用户相同名称证书有多个，总是跟`profile`文件对不上，可以通过钥匙串管理(MacOS 15.0以上执行`open /System/Library/CoreServices/Applications/Keychain\ Access.app`)
 ```
 
 8. 进入【依赖文件】在`*.xcassets` 分组里面点“+” 把icon所在的xcassets `images.xcassets` 加入，然后在 `*.plist` 分组里面点 `"+"` 把 `~/Desktop/WNXHuntForCity/info.plist` 加入进来，就会发现应用的icon和相关信息更新了（依赖文件的作用就是创建差异化的文件资源，假如一个应用有多个马甲，这个依赖文件就是差异化的配置，不同的包用不同的依赖文件）
