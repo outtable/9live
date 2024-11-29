@@ -36,4 +36,4 @@ sort: 4
 > 
 
 >
-<img src="https://outtable.github.io/9live/assets/images/snapshots/snapshot-36.png" width="60%">
+<img src="https://outtable.github.io/confuse-9live/assets/images/snapshots/snapshot-36.png" width="60%">

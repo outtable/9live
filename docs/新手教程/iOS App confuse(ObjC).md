@@ -28,11 +28,11 @@ sort: 5
 
 4. xcode打开 `~/Desktop/WNXHuntForCity.xcworkspace` 文件，把`COSDK`目录加入到工程里面 (实际的COSDK.framework名称跟图片可能不一致)
 >
-<img src="https://outtable.github.io/9live/assets/images/snapshots/snapshot-1.png" width="60%">
+<img src="https://outtable.github.io/confuse-9live/assets/images/snapshots/snapshot-1.png" width="60%">
 
 5. 修改一下`WNXHuntForCity.xcproject` 的 `bundle id` 改为我们给了您注册文件的那个 `bundle id`
 >
-<img src="https://outtable.github.io/9live/assets/images/snapshots/snapshot-2.png" width="90%">
+<img src="https://outtable.github.io/confuse-9live/assets/images/snapshots/snapshot-2.png" width="90%">
 
 6. 编译一次项目，确保能正确编译
 
@@ -45,7 +45,7 @@ sort: 5
 
 4. 点击当前项目的最右边一个按钮，进入`WNXHuntForCity` 这个项目，等待完成工程分析(项目结构都能在界面中正确显示了）
 >
-<img src="https://outtable.github.io/9live/assets/images/snapshots/snapshot-3.png" width="60%">
+<img src="https://outtable.github.io/confuse-9live/assets/images/snapshots/snapshot-3.png" width="60%">
 >
 ```warning
 如果你的项目使用了cocospod，请先执行 `pod update` 或者 `pod install` 然后再来做工程分析，并且确保你的工程可以正常编译
@@ -53,15 +53,15 @@ sort: 5
 
 5. 退出当前项目，回到工程列表（关闭当前项目就行了），找到工程设置按钮 点进去
 >
-<img src="https://outtable.github.io/9live/assets/images/snapshots/snapshot-4.png" width="60%">
+<img src="https://outtable.github.io/confuse-9live/assets/images/snapshots/snapshot-4.png" width="60%">
 
 6. 第一个选项卡是“依赖文件”，找到`COSDK`那个分组，点` '+' `按钮，依次把`~/WNXHuntForCity/WNXHuntForCity/COSDK`里面3个文件加入进去
 >
-<img src="https://outtable.github.io/9live/assets/images/snapshots/snapshot-5.png" width="90%">
+<img src="https://outtable.github.io/confuse-9live/assets/images/snapshots/snapshot-5.png" width="90%">
 
 7. 进入【编译设置】选项卡，添加一个`Debug`证书设置，target选择`WNXHuntForCity`，`bundle id`使用您新应用的`bundle id`（注意一定要正确，不然会影响查找本地 mobile provision file文件错误)，`certificate` 选正确的证书，然后点 `mobile provision file` 旁边的搜索按钮，可以从本地识别对应的文件） 
 >
-<img src="https://outtable.github.io/9live/assets/images/snapshots/snapshot-11.png" width="60%">
+<img src="https://outtable.github.io/confuse-9live/assets/images/snapshots/snapshot-11.png" width="60%">
 >
 ```warning
 使用了 `Xcode`中 `Signing & Capabilities` 里的`Automatically manage signing` 使用账号自动签名的记得关闭，不然会引起编译错误。
@@ -85,7 +85,7 @@ sort: 5
 
 9. 点击【开始混淆】按钮，会弹出运行设置，默认【调试模式】是打开的
 >
-<img src="https://outtable.github.io/9live/assets/images/snapshots/snapshot-26.png" width="90%">
+<img src="https://outtable.github.io/confuse-9live/assets/images/snapshots/snapshot-26.png" width="90%">
 
 10. 确保【swift混编】是关闭的，没有用到混编就不需要了
 
@@ -95,17 +95,17 @@ sort: 5
 
 13. 修改【COSDK自定义名称】为给你的`Products.zip`里面的那个framework的名字(如果给你的是COSDK.framework，可以不填写)
 >
-<img src="https://outtable.github.io/9live/assets/images/snapshots/snapshot-34.png" width="40%">
+<img src="https://outtable.github.io/confuse-9live/assets/images/snapshots/snapshot-34.png" width="40%">
 
 14. 确保只打开【ARM64】指令，之后出正式版本才需要加上ARMv7，其他几种指令集的也没有太多必要了
 
 15. 在预处理结束后，你应该会看到如下这张截图，点击解决问题，程序会挂起，这是你会发现警告消息里面，多了一堆警告，并且常量识别里面多了一堆常量，这些警告都是预处理阶段【工程配置】-【常量识别】里面配置的一些识别函数调用时引起，检测到了不确定的变量值，目前来说只有keyvalue需要你特别关注一下，常量识别的作用是帮助你识别一些文件名/图片名/ObjC类型名/ObjC协议名/ObjC方法名称，降低执行文件中的常量相似度，当然即使某些地方用了变量拼接这些名词，也无所谓，在应用执行时`COSDK`会修复这些名称错误
 >
-<img src="https://outtable.github.io/9live/assets/images/snapshots/snapshot-7.png" width="60%">
+<img src="https://outtable.github.io/confuse-9live/assets/images/snapshots/snapshot-7.png" width="60%">
 
 16. 点击【开始混淆】混淆，然后一直等到混淆器提示混淆完成，点击【打开工程】按钮，准备运行应用，会发现 `WNXHuntForCity`那个下拉框打开后，会多一个target，它的icon上面有一个阻止的标示，选中它，会自动安装应用到手机，就可以开始调试了
 >
-<img src="https://outtable.github.io/9live/assets/images/snapshots/snapshot-8.png" width="80%">
+<img src="https://outtable.github.io/confuse-9live/assets/images/snapshots/snapshot-8.png" width="80%">
 >
 ```tip
  如果你的手机不是arm64架构的，想调试的时候新版本的Xcode是会提示无法安装的，请更换一个arm64架构的手机调试（安装不影响)
