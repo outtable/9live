@@ -25,10 +25,12 @@
 
 ## 外部SDK文件支持格式
 - .a
-- .framework(Fake Framework)
+- .framework(Static)
+- .xcframework(Static)
 
 ## 支持的 XCode 版本
 - Xcode 15.x
+- Xcode 16.x
 
 ## 产品特性
 
